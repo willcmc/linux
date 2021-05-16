@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# ==============INFORMATION===============
+# Bash script to install or reinstall 
+# nvidia drivers on Ubuntu. 
+# 
+# Written by William E. R.
+# ========================================
+
 # ==============INSTRUCTIONS==============
 # run the following commands:
 # 1. chmod +x nvidia_driver.sh
