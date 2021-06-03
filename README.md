@@ -1,5 +1,5 @@
-# Linux
-Bash scripts to do smart stuff.
+# Utilities
+Bash scripts, python codes, etc to do smart stuff.
 
 * [nvidia_driver.sh](https://github.com/willcmc/linux/blob/main/nvidia_driver.sh)
     * Installs (or reinstalls or updates) your nvidia drivers.
