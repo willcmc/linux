@@ -3,7 +3,7 @@ This is a simple program (written almost entirely on [Vim](https://www.vim.org/)
 
 It is achieved by the following steps:
 - Data files stored as .txt
-- Python script generates corresponding [gnuplot](http://www.gnuplot.info/) scripts (in my case, 360; one corresponding to each timestep)
+- Python script (`gen.py`) generates corresponding [gnuplot](http://www.gnuplot.info/) scripts (in my case, 360; one corresponding to each timestep)
 - Python script runs the generated scripts
 - Python script merges all the frames into a `.avi`
 
