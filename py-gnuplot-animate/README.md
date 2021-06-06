@@ -10,7 +10,7 @@ It is achieved by the following steps:
 Let's all take a moment to appreciate how [IAS](https://en.wikipedia.org/wiki/Indicated_airspeed), [TAS](https://en.wikipedia.org/wiki/True_airspeed), and [Mach number](https://en.wikipedia.org/wiki/Mach_number) change throughout the climb to cruise altitude!
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/52452181/120906326-268ac000-c676-11eb-97cd-700d9bb6bb02.gif" />
+  <img width=100% src="https://user-images.githubusercontent.com/52452181/120913176-974fcd80-c6b2-11eb-9278-d1c1e826a3c1.gif" />
 </p>
 
 Some important things:
@@ -19,3 +19,5 @@ Some important things:
 - You will need `openCV-python` to run this! Do a `pip install` if you don't have it.
 - This also needs `gnuplot`, which can be downloaded from the link above. Note that this is not a python package, but is run via a shell command.
 - Code is written for python3.
+
+
