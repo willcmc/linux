@@ -16,7 +16,7 @@ Bash scripts, python codes, etc to do smart stuff.
     * This should generate a bar plot showing how much you and the other person in the conversation talked since the beginning of the exported conversation, on a daily basis.
     * This will not work for group conversations.
 
-### Python Gnuplot Data Animator
+### [Python Gnuplot Data Animator](https://github.com/willcmc/util/tree/main/py-gnuplot-animate)
 * [gen.py](https://github.com/willcmc/util/blob/main/py-gnuplot-animate/gen.py)
     * Generates gnuplot scripts for data stored under `./data/`.
     * Runs the scripts and generates the images for the plots.
