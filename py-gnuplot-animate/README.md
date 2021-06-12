@@ -10,7 +10,7 @@ It is achieved by the following steps:
 Let's all take a moment to appreciate how [IAS](https://en.wikipedia.org/wiki/Indicated_airspeed), [TAS](https://en.wikipedia.org/wiki/True_airspeed), and [Mach number](https://en.wikipedia.org/wiki/Mach_number) change throughout the climb to cruise altitude!
 
 <p align="center">
-  <img width=100% src="https://user-images.githubusercontent.com/52452181/120913176-974fcd80-c6b2-11eb-9278-d1c1e826a3c1.gif" />
+  <img width=100% src="https://user-images.githubusercontent.com/52452181/121773342-fb81fe00-cb98-11eb-895e-22fb9e0a36d2.gif" />
 </p>
 
 Some important things:
