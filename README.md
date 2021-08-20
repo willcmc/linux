@@ -3,6 +3,11 @@ Bash scripts, python codes, etc to do smart stuff.
 
 ## Bash 
 
+### AVR Project Creator
+* [create_avr_prj.sh](https://github.com/willcmc/util/blob/90052b13b5a8e30e31b63d2713c304b3bb66f20e/create_avr_prj.sh)
+    * Creates an AVR Project with a Makefile
+    * Accepts arguments in the format `create_avr_prj -d <board-name> -f <frequency in Hz> -b <baud-rate> -n <project-name>`
+    * Place it in your `/usr/local/bin` (or any damn path that is added to bash).
 ### Nvidia Ubuntu Driver Installer Shell
 * [nvidia_driver.sh](https://github.com/willcmc/util/blob/main/nvidia_driver.sh)
     * Installs (or reinstalls or updates) your nvidia drivers.
