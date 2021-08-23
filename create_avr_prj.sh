@@ -78,7 +78,8 @@ int main(void){
 EOF
 
 cat <<EOF > Makefile
-# From https://github.com/codergirljp/ATMega32-AVR-Programming/blob/9d808e5b9df42cf5a10dc6f9a763f30126550cee/Makefile
+## From https://github.com/codergirljp/ATMega32-AVR-Programming/blob/9d808e5b9df42cf5a10dc6f9a763f30126550cee/Makefile
+## Modified slightly by William E. R. to accomodate assembly snippets
 
 ##########------------------------------------------------------##########
 ##########              Project-specific Details                ##########
@@ -101,6 +102,10 @@ LOCAL_SOURCE =
 #EXTRA_SOURCE_DIR = ../../lib/
 EXTRA_SOURCE_DIR =
 EXTRA_SOURCE_FILES = 
+
+## Assembler files if you need 'em
+
+ASRC = 
 
 ##########------------------------------------------------------##########
 ##########                 Programmer Defaults                  ##########
@@ -142,6 +147,7 @@ CFLAGS += -ffunction-sections -fdata-sections -Wl,--gc-sections -Wl,--relax
 CFLAGS += -std=gnu99
 ## CFLAGS += -Wl,-u,vfprintf -lprintf_flt -lm  ## for floating-point printf
 ## CFLAGS += -Wl,-u,vfprintf -lprintf_min      ## for smaller printf
+ASFLAGS = -g -Wall -Os -DF_CPU=\$(F_CPU)UL -mmcu=\$(MCU)
 
 ## Lump target and extra source files together
 TARGET = \$(strip \$(basename \$(MAIN)))
@@ -149,15 +155,19 @@ SRC = \$(TARGET).c
 EXTRA_SOURCE = \$(addprefix \$(EXTRA_SOURCE_DIR), \$(EXTRA_SOURCE_FILES))
 SRC += \$(EXTRA_SOURCE) 
 SRC += \$(LOCAL_SOURCE) 
+SRC += \$(ASRC) 
 
 ## List of all header files
 HEADERS = \$(SRC:.c=.h) 
 
 ## For every .c file, compile an .o object file
-OBJ = \$(SRC:.c=.o) 
+OBJ = \$(SRC:.c=.o) \$(ASRC:.S=.o)
 
 ## Generic Makefile targets.  (Only .hex file is necessary)
 all: \$(TARGET).hex
+
+%.o : %.S
+	\$(CC) -c \$(ASFLAGS) $< -o \$@
 
 %.hex: %.elf
 	\$(OBJCOPY) -R .eeprom -O ihex $< \$@
@@ -185,7 +195,7 @@ disasm: disassemble
 eeprom: \$(TARGET).eeprom
 
 %.lst: %.elf
-	\$(OBJDUMP) -S $< > $@
+	\$(OBJDUMP) -S $< > \$@
 
 # Optionally show how big the resulting program is 
 size:  \$(TARGET).elf
