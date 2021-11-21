@@ -17,7 +17,7 @@ Some important things:
 - LM Roman font taken from [here](https://www.fontsquirrel.com/fonts/latin-modern-roman). All credits go to GUST e-foundry.
 - `dat.ods` is just the data in `./data/` in spreadsheet form.
 - You will need `openCV-python` to run this! Do a `pip install` if you don't have it.
-- This also needs `gnuplot`, which can be downloaded from the link above. Note that this is not a python package, but is run via a shell command.
+- This also needs `gnuplot`, which can be downloaded from the link above. Note that this is not a python package, but is a binary on its own.
 - Code is written for python3.
 
 
